@@ -1,0 +1,295 @@
+/* BookCatalog.css */
+
+/* Contêiner do catálogo */
+.catalog-container {
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+                url('https://www.transparenttextures.com/patterns/tech-1.png') no-repeat center center;
+    background-size: cover;
+    color: white;
+    border-radius: 10px;
+}
+
+/* Título do catálogo */
+.catalog-title {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgb(148, 3, 3); /* Efeito de brilho */
+}
+
+/* Botões de navegação (setas) */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.carousel-button-left {
+    left: 10px;
+}
+
+.carousel-button-right {
+    right: 10px;
+}
+
+.carousel-button:hover {
+    transform: scale(1.2); /* Aumenta o tamanho das setas */
+}
+
+/* Livro principal (maior) */
+.main-book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.main-book-image {
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    /* Remover bordas e sombras */
+    border-radius: 0;   /* Sem bordas arredondadas */
+    box-shadow: none;    /* Sem sombra */
+    overflow: hidden;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.main-book-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;  /* Garante que a imagem será totalmente visível */
+}
+
+.main-book-title {
+    color: white;
+    font-size: 18px;
+    margin-top: 35px;
+}
+
+.main-book-author {
+    color: white;
+    font-size: 14px;
+}
+
+/* Contêiner para livros menores com rolagem horizontal */
+.book-items-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 20px 0;
+    justify-content: center;
+}
+
+/* Estilos para os livros menores */
+.book-item {
+    width: 420px;
+    height: 160px;
+    background-color: #444;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    opacity: 0.8;
+}
+
+.book-item.active {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.book-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .main-book-image {
+        max-width: 90%;
+        height: 250px;
+    }
+
+    .book-item {
+        width: 1001px;
+        height: 1420px;
+    }
+
+    .catalog-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-button {
+        font-size: 1.5rem;
+    }
+
+    .main-book-image {
+        height: 2020px;
+    }
+
+    .book-item {
+        width: 800px;
+        height: 1200px;
+    }
+}
+
+/* Remover a estilização global */
+.catalog-container, .main-book, .carousel-button, .book-items-container, .book-item {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* Estilo para a lista de livros */
+.book-list {
+    width: 80%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilo para cada item de livro */
+.book-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #2b2b2b;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.book-item:hover {
+    transform: scale(1.02);
+    background-color: #383838;
+}
+
+/* Estilo para a imagem do livro */
+.book-item img {
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+/* Estilo para as informações do livro */
+.book-info {
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+.book-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #f0f0f0;
+}
+
+.book-info p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+    color: #bbb;
+}
+
+/* Estilo para os botões */
+.book-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.book-actions button {
+    padding: 10px 15px;
+    background-color: #f50303;
+}
+
+
+/* Estilo para a lista de livros */
+.library-book-list {
+    width: 80%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilo para cada item de livro */
+.library-book-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #2b2b2b;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.library-book-item:hover {
+    transform: scale(1.02);
+    background-color: #383838;
+}
+
+/* Estilo para a imagem do livro */
+.library-book-item img {
+    width: 600px;
+    height: 900px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+/* Estilo para as informações do livro */
+.library-book-info {
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+.library-book-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #f0f0f0;
+}
+
+.library-book-info p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+    color: #bbb;
+}
+
+/* Estilo para os botões */
+.library-book-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.library-book-actions button {
+    padding: 10px 15px;
+    background-color: #f50303;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.library-book-actions button:hover {
+    background-color: #388e3c;
+}

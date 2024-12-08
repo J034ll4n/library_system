@@ -1,0 +1,132 @@
+/* index.css */
+
+/* Define o estilo base para todos os elementos */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #141414; /* Cor de fundo escura */
+  color: white; /* Cor do texto branca para contraste */
+  overflow-x: hidden; /* Impede que o conteúdo transborde lateralmente */
+}
+
+/* Forçar o layout para telas grandes */
+html {
+  font-size: 16px; /* Tamanho fixo da fonte para evitar zoom em telas pequenas */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Título principal */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 20px;
+  color: white;
+}
+
+/* Estilo para os elementos do catálogo de livros */
+.book-catalog {
+  width: 80%;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+/* Estilo para o formulário de adicionar/editar livro */
+form {
+  width: 60%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+/* Estilo dos botões */
+button {
+  background-color: #f50303;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #388e3c;
+}
+
+/* Garantir que os itens da lista de livros não alterem de tamanho */
+.book-list {
+  width: 80%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book-item {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #333;
+  border-radius: 8px;
+  display: flex;
+  justify-content: flex-start; /* Ajustado para alinhar os itens à esquerda */
+  align-items: center;
+}
+
+/* Ajuste para a imagem */
+.book-item img {
+  width: 60px; /* Tamanho ajustado */
+  height: 90px; /* Tamanho ajustado */
+  object-fit: cover;
+  margin-right: 15px; /* Aumentado para espaçar melhor a imagem do texto */
+}
+
+/* Estilo para o título e descrição do livro */
+.book-item h3 {
+  color: #f0f0f0;
+  font-size: 1.2rem;
+  margin: 0;
+  flex-grow: 1; /* Faz o título ocupar o espaço restante */
+}
+
+.book-item p {
+  color: #bbb;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Estilos para telas menores */
+@media (max-width: 1024px) {
+  /* Ajustes adicionais podem ser feitos aqui para telas menores */
+}
+
+@media (max-width: 768px) {
+  /* Ajusta a largura e outras propriedades para telas pequenas */
+  .book-catalog,
+  form,
+  .book-list {
+    width: 90%;
+  }
+
+  .book-item {
+    flex-direction: column; /* Empilha os itens na vertical */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+  }
+
+  .book-item img {
+    width: 80px; /* Aumenta a largura da imagem */
+    height: 120px; /* Aumenta a altura da imagem */
+    margin-bottom: 10px; /* Adiciona margem inferior entre a imagem e o texto */
+  }
+
+  .book-item h3,
+  .book-item p {
+    font-size: 1rem; /* Ajuste de tamanho de fonte para melhor leitura */
+  }
+}
