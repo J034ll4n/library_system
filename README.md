@@ -1,7 +1,7 @@
 # Biblioteca Digital: Sistema Integrado de Gestão de Livros **CRUD**
 
 Bem-vindo ao **Biblioteca Digital**, um sistema de gestão de livros que permite realizar operações de **CRUD** (Criar, Consultar, Atualizar e Deletar) em uma biblioteca municipal.
-![image](https://github.com/user-attachments/assets/44e6c305-8a8e-4e95-b37c-4b05d97c122f)
+![Sem título](https://github.com/user-attachments/assets/80b16399-243f-415f-a89d-1d99027ab3bf)
 
 ## 📖 Visão Geral
 
